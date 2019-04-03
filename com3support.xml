@@ -19,7 +19,7 @@
 	</files>
 	
 	<updateservers>
-        <server type="extension" priority="1" name="Dashboard module update">https://raw.githubusercontent.com/micker/plg_com3support/master/update.xml</server>
+        <server type="extension" priority="1" name="Com3elles support">https://raw.githubusercontent.com/micker/plg_com3support/master/update.xml</server>
     </updateservers>
 
 </extension>
