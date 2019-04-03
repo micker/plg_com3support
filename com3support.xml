@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="plugin" group="system" method="upgrade">
+	<name>Com3elles chat support</name>
+	<author>Com3elles</author>
+	<authorEmail>yannick@com3elles.com</authorEmail>
+	<authorUrl>https://com3elles.com</authorUrl>
+	<creationDate></creationDate>
+	<version>1</version>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<url>https://com3elles.com</url>
+	<description>Support live pour les clients de Com3elles</description>
+
+	<!-- Scripts to run on installation -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Plugin files -->
+	<files>
+		<filename plugin="com3support">com3support.php</filename>
+	</files>
+	
+	<updateservers>
+        <server type="extension" priority="1" name="Dashboard module update">https://raw.githubusercontent.com/micker/com3support/master/update.xml</server>
+    </updateservers>
+
+</extension>
