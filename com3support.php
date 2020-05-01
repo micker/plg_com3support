@@ -7,6 +7,7 @@
 **/
 
 defined('_JEXEC') or die;
+use Joomla\CMS\Factory;
 
 /**
  * Crisp plugin.
@@ -49,9 +50,9 @@ class plgSystemCom3support extends JPlugin
    */
   public function onAfterInitialise()
   {
-    $app = JFactory::getApplication();
-    $doc = JFactory::getDocument();
-    $user = JFactory::getUser();
+    $app = Factory::getApplication();
+    $doc = Factory::getDocument();
+    $user = Factory::getUser();
 
     if ($app->isSite())
       return;
@@ -69,7 +70,9 @@ class plgSystemCom3support extends JPlugin
         s.async=1;d.getElementsByTagName('head')[0].appendChild(s);
       })();
     ";
+    if (JFactory::getApplication()->input->get('tmpl') !=='component'){
     $doc->addScriptDeclaration($script, $type = 'text/javascript');
+      }
 
     if (!$user->guest) {
       $script = '$crisp.push(["set", "user:email", "' . $user->email . '"]);';
