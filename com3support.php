@@ -48,7 +48,7 @@ class plgSystemCom3support extends JPlugin
    *
    * @since   1.0
    */
-  public function onAfterInitialise()
+  public function onBeforeCompileHead()
   {
     $app = Factory::getApplication();
     $doc = Factory::getDocument();
