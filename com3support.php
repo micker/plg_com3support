@@ -54,7 +54,7 @@ class plgSystemCom3support extends JPlugin
     $doc = Factory::getDocument();
     $user = Factory::getUser();
 
-    if ($app->isSite())
+    if ($app->isClient('site'))
       return;
 
 
