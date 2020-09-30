@@ -17,12 +17,6 @@ defined('_JEXEC') or die;
  */
 class plgSystemCom3supportInstallerScript
 {
-	/**
-	 * Constructor
-	 *
-	 * @param   JAdapterInstance  $adapter  The object responsible for running this script
-	 */
-	public function __construct(JAdapterInstance $adapter) {}
 
 	/**
 	 * Called before any type of action
@@ -32,7 +26,7 @@ class plgSystemCom3supportInstallerScript
 	 *
 	 * @return  boolean  True on success
 	 */
-	public function preflight($route, JAdapterInstance $adapter) {}
+	public function preflight() {}
 
 	/**
 	 * Called after any type of action
@@ -42,7 +36,7 @@ class plgSystemCom3supportInstallerScript
 	 *
 	 * @return  boolean  True on success
 	 */
-	public function postflight($route, JAdapterInstance $adapter) {}
+	public function postflight() {}
 
 	/**
 	 * Called on installation
@@ -51,7 +45,7 @@ class plgSystemCom3supportInstallerScript
 	 *
 	 * @return  boolean  True on success
 	 */
-	public function install(JAdapterInstance $adapter) {
+	public function install() {
 		$query = "update #__extensions set enabled=1 where type = 'plugin' and element = 'com3support'";
 
 		$db = JFactory::getDBO();
@@ -66,12 +60,12 @@ class plgSystemCom3supportInstallerScript
 	 *
 	 * @return  boolean  True on success
 	 */
-	public function update(JAdapterInstance $adapter) {}
+	public function update() {}
 
 	/**
 	 * Called on uninstallation
 	 *
 	 * @param   JAdapterInstance  $adapter  The object responsible for running this script
 	 */
-	public function uninstall(JAdapterInstance $adapter) {}
+	public function uninstall() {}
 }
