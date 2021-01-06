@@ -56,7 +56,12 @@ class plgSystemCom3support extends JPlugin
 
     if ($app->isClient('site'))
       return;
-
+// Are we in a modal?
+$input   = Factory::getApplication()->input;
+if ($input->get('tmpl', '', 'cmd') === 'component')
+{
+  return;
+}
 
 
     $website_id = 'fe8ce151-db3b-4dc4-ba60-233e5b8d95e7';
